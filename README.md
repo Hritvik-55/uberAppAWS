@@ -33,7 +33,7 @@
    * Response: Returns a ResponseEntity with a LoginResponseDTO object containing a new access token and an OK (200) status code upon successful refresh.
    * If the refresh token is not found in the request or is invalid, an AuthenticationServiceException is thrown.
 
-## These endpoints provides an overview of the endpoints available in the com.application.uberApp.controllers.DriverController class. This controller handles functionalities specific to drivers within the Uber application.
+## Following endpoints provides an overview of the endpoints available in the com.application.uberApp.controllers.DriverController class. This controller handles functionalities specific to drivers within the Uber application.
 
 * Authorization: All endpoints in this controller require the user to be authenticated as a driver (ROLE_DRIVER).
 
@@ -65,6 +65,39 @@
  * Response: Returns a ResponseEntity containing a DriverDTO object with the driver's details.
  7. Get My Rides (GET /drivers/getMyRides)
  * Description: Retrieves a paginated list of the driver's past and upcoming rides.
+ * Request Parameters:
+ * pageOffset (default: 0): The page number to retrieve (zero-based indexing).
+ * pageSize (default: 10): The number of rides to retrieve per page.
+ * Response: Returns a ResponseEntity containing a Page<RideDTO> object with ride details for the requested page.
+
+## These endpoints provides an overview of the endpoints available in the com.application.uberApp.controllers.RiderController class. This controller handles functionalities specific to riders within the Uber application.
+
+* Authorization: All endpoints in this controller require the user to be authenticated as a rider (ROLE_RIDER).
+
+## Endpoints:
+
+ 1. Request Ride (POST /rider/requestRide)
+ 
+ * Description: Allows a rider to request a ride from a nearby driver.
+ * Request Body: Requires a RideRequestDTO object containing details about the desired ride (refer to RideRequestDTO class documentation for specific fields).
+ * Response: Returns a ResponseEntity containing a RideRequestDTO object with details of the requested ride upon success.
+ 2. Cancel Ride (POST /rider/cancelRide/{rideId})
+ 
+ * Description: Allows a rider to cancel a previously requested ride.
+ * Request Path Variable: {rideId} - ID of the ride to be canceled.
+ * Response: Returns a ResponseEntity containing a RideDTO object with updated ride details upon successful cancellation.
+ 3. Rate Driver (POST /rider/rateDriver)
+ 
+ * Description: Allows a rider to rate a driver after completing a ride.
+ * Request Body: Requires a RatingDTO object containing the ride ID and the rating for the driver. (refer to RatingDTO class documentation for specific fields)
+ * Response: Returns a ResponseEntity containing a DriverDTO object with updated rating information upon successful rating submission.
+ 4. Get My Profile (GET /rider/getMyProfile)
+ 
+ * Description: Retrieves the rider's profile information.
+ * Response: Returns a ResponseEntity containing a RiderDTO object with the rider's details.
+ 5. Get My Rides (GET /rider/getMyRides)
+ 
+ * Description: Retrieves a paginated list of the rider's past and upcoming rides.
  * Request Parameters:
  * pageOffset (default: 0): The page number to retrieve (zero-based indexing).
  * pageSize (default: 10): The number of rides to retrieve per page.
