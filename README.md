@@ -7,6 +7,8 @@
   * PostgreSQL for SQL Database.
   * POSTGIS extension in PostgreSQL for location.
   * Strategy design pattern for DriverAllocation, Payment and Ridefare calculation.
+  * ModelMapper for transforming the DTO to concrete classes and vice-versa.
+   
   
 
 # Endpoints
