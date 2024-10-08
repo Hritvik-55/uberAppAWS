@@ -9,7 +9,7 @@
   * Strategy design pattern for DriverAllocation, Payment and Ridefare calculation.
   * ModelMapper for transforming the DTO to concrete classes and vice-versa.
    
-  # This document provides an overview of the endpoints available in the com.application.uberApp.controllers.AuthController class. This controller handles user authentication and authorization functionalities for the Uber application.
+  ## This document provides an overview of the endpoints available in the com.application.uberApp.controllers.AuthController class. This controller handles user authentication and authorization functionalities for the Uber application.
 
 ## Endpoints
   1. Signup (POST /auth/signUp)
