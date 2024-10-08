@@ -11,7 +11,7 @@
    
   
 
-# Endpoints
+## Endpoints
   1. Signup (POST /auth/signUp)
     * Description: This endpoint allows users to register for the Uber application.
     * Request Body: Requires a SignUpDTO object containing user information like email, password, etc. (refer to SignUpDTO class documentation for specific fields)
