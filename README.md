@@ -1,9 +1,13 @@
 # uberAppAWS
 
 ## Technologies Used
-  Spring Boot for building RESTful APIs
-  Lombok for reducing boilerplate code
-  Spring Security for user authentication and authorization
+  * Spring Boot for building RESTful APIs.
+  * Lombok for reducing boilerplate code.
+  * Spring Security for user authentication and authorization.
+  * PostgreSQL for SQL Database.
+  * POSTGIS extension in PostgreSQL for location.
+  * Strategy design pattern for DriverAllocation, Payment and Ridefare calculation.
+  
 
 # Endpoints
   1. Signup (POST /auth/signUp)
