@@ -1,6 +1,6 @@
 # uberAppAWS
 
-#Technologies Used
+##Technologies Used
   Spring Boot for building RESTful APIs
   Lombok for reducing boilerplate code
   Spring Security for user authentication and authorization
