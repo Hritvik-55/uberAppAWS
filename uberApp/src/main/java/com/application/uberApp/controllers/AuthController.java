@@ -39,7 +39,7 @@ public class AuthController {
                                                   HttpServletResponse response, HttpServletRequest request){
         String[] tokens = authService.login(loginRequestDTO.getEmail(),loginRequestDTO.getPassword());
         Cookie cookie=new Cookie("token",tokens[1]);
-        cookie.setHttpOnly(true);
+        cookie.setHttpOnly(false);
         response.addCookie(cookie);
         return ResponseEntity.ok(new LoginResponseDTO(tokens[0]));
     }
