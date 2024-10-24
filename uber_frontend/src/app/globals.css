@@ -2,3 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
+.signupForm:hover .signupBG{
+    opacity:.5!important
+}
