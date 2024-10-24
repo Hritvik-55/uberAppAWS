@@ -49,7 +49,7 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     @Transactional
-    public UserDTO signup(SignUpDTO signUpDTO) {
+    public UserDTO   signup(SignUpDTO signUpDTO) {
         User user = userRepository.findByEmail(signUpDTO.getEmail()).orElse(null);
         if(user!=null){
             throw new RuntimeConflictException("User already exists with email "+signUpDTO.getEmail());
